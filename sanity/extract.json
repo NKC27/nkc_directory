@@ -865,6 +865,13 @@
           "type": "string"
         },
         "optional": true
+      },
+      "pitch": {
+        "type": "objectAttribute",
+        "value": {
+          "type": "string"
+        },
+        "optional": true
       }
     }
   },
@@ -975,6 +982,13 @@
         },
         "optional": true
       }
+    }
+  },
+  {
+    "name": "markdown",
+    "type": "type",
+    "value": {
+      "type": "string"
     }
   }
 ]

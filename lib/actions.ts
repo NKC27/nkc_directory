@@ -4,9 +4,9 @@ import { auth } from '@/auth';
 import { parseServerActionResponse } from '@/lib/utils';
 import slugify from 'slugify';
 import { writeClient } from '@/sanity/lib/write-client';
-
+// iinstead of any state: any I have replaced with unknown as this was flagging an error??
 export const createPitch = async (
-  state: any,
+  state: unknown,
   form: FormData,
   pitch: string
 ) => {

@@ -1,7 +1,6 @@
 import 'server-only';
 
 import { createClient } from 'next-sanity';
-
 import { apiVersion, dataset, projectId, token } from '../env';
 
 export const writeClient = createClient({
@@ -10,9 +9,8 @@ export const writeClient = createClient({
   apiVersion,
   useCdn: false,
   token,
-  // Set to false if statically generating pages, using ISR or tag-based revalidation
 });
 
 if (!writeClient.config().token) {
-  throw new Error('The Write token cannot be found.');
+  throw new Error('Write token not found.');
 }
